@@ -1,3 +1,1 @@
-Gustavo Mafra portfolio
-
-https://gustavosmafra.github.io/
+Gustavo Mafra's portfolio
