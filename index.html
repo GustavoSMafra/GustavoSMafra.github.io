@@ -14,52 +14,74 @@
 </head>
 <body class="bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900 h-screen">
     <header class="w-full fixed top-0 z-50 bg-slate-900 leading-relaxed">
-        <nav class="flex w-full">
-            <div class="flex items-center justify-center ml-10">
-                <a href="#about" class="relative group">
-                    <p class="text-teal-500 text-3xl font-bold p-2">Gustavo.</p>
-                    <span class="absolute bottom-0 left-0 w-full h-1 bg-teal-500 scale-x-0 group-hover:scale-x-100 transform transition-transform duration-300 ease-out"></span>
+        <nav class="flex flex-col w-full items-center">
+            <div class="flex w-full items-center">
+                <!-- Logo -->
+                <div class="flex items-center justify-center ml-10 md:p-10 xs:ml-5">
+                    <a href="#about" class="relative group">
+                        <p class="text-teal-500 text-3xl font-bold p-2">Gustavo.</p>
+                        <span class="absolute bottom-0 left-0 w-full h-1 bg-teal-500 scale-x-0 group-hover:scale-x-100 transform transition-transform duration-300 ease-out"></span>
+                    </a>
+                </div>         
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center mr-5 ml-auto p-10">
+                    <button id="menu-toggle" class="text-teal-500 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+    
+                <!-- Desktop Menu Buttons -->
+                <ul id="desktop-menu" class="hidden md:flex md:items-center md:justify-end md:w-full md:mr-10 md:p-10"">
+                    <li class="flex items-center justify-center relative group">
+                        <a href="#about" class="flex text-xl hover:text-teal-500 hover:shadow-teal-500 p-2 px-7">
+                            <p class="mr-2 text-teal-500">01.</p> 
+                            About
+                        </a>
+                        <span class="absolute bottom-0 w-24 h-1 bg-teal-500 scale-x-0 group-hover:scale-x-100 transform transition-transform duration-300 ease-out"></span>
+                    </li>
+                    <li class="flex items-center justify-center relative group">
+                        <a href="#experience" class="flex text-xl hover:text-teal-500 hover:shadow-teal-500 p-2 px-7">
+                            <p class="mr-2 text-teal-500">02.</p> 
+                            Experiences
+                        </a>
+                        <span class="absolute bottom-0 w-36 h-1 bg-teal-500 scale-x-0 group-hover:scale-x-100 transform transition-transform duration-300 ease-out"></span>
+                    </li>
+                    <li class="flex items-center justify-center relative group">
+                        <a href="#projects" class="flex text-xl hover:text-teal-500 hover:shadow-teal-500 p-2 px-7">
+                            <p class="mr-2 text-teal-500">03.</p> 
+                            Projects
+                        </a>
+                        <span class="absolute bottom-0 w-28 h-1 bg-teal-500 scale-x-0 group-hover:scale-x-100 transform transition-transform duration-300 ease-out"></span>
+                    </li>
+                    <li class="flex items-center ml-3 rounded-lg bg-teal-500 hover:cursor-pointer before:ease relative h-12 overflow-hidden shadow-2xl transition-all before:absolute before:top-1/2 before:h-0 before:w-64 before:origin-center before:-translate-x-20 before:rotate-45 before:duration-300 hover:text-white hover:shadow-teal-500 hover:before:h-64 hover:before:-translate-y-32">
+                        <a href="./documents/resume.pdf" download="Resume Gustavo Mafra" target="_blank" rel="noopener noreferrer" class="flex text-xl px-7 py-3 text-white z-10">
+                            Resume
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center bg-slate-900 w-full py-5 p-0">
+                <a href="#about" class="text-xl text-teal-500 py-2">About</a>
+                <a href="#experience" class="text-xl text-teal-500 py-2">Experiences</a>
+                <a href="#projects" class="text-xl text-teal-500 py-2">Projects</a>
+                <a href="./documents/resume.pdf" download="Resume Gustavo Mafra" target="_blank" rel="noopener noreferrer" class="text-xl text-white bg-teal-500 rounded-lg py-3 px-7 mt-2">
+                    Resume
                 </a>
-            </div>                     
-            <ul class="flex justify-end items-center w-full mr-10 p-5">
-                <li class="flex items-center justify-center relative group">
-                    <a href="#about" class="flex text-xl hover:text-teal-500 hover:shadow-teal-500 p-2 px-7">
-                        <p class="mr-2 text-teal-500">01.</p> 
-                        About
-                    </a>
-                    <span class="absolute bottom-0 w-24 h-1 bg-teal-500 scale-x-0 group-hover:scale-x-100 transform transition-transform duration-300 ease-out"></span>
-                </li>
-                <li class="flex items-center justify-center relative group">
-                    <a href="#experience" class="flex text-xl hover:text-teal-500 hover:shadow-teal-500 p-2 px-7">
-                        <p class="mr-2 text-teal-500">02.</p> 
-                        Experiences
-                    </a>
-                    <span class="absolute bottom-0 w-36 h-1 bg-teal-500 scale-x-0 group-hover:scale-x-100 transform transition-transform duration-300 ease-out"></span>
-                </li>
-                <li class="flex items-center justify-center relative group">
-                    <a href="#projects" class="flex text-xl hover:text-teal-500 hover:shadow-teal-500 p-2 px-7">
-                        <p class="mr-2 text-teal-500">03.</p> 
-                        Projects
-                    </a>
-                    <span class="absolute bottom-0 w-28 h-1 bg-teal-500 scale-x-0 group-hover:scale-x-100 transform transition-transform duration-300 ease-out"></span>
-                </li>
-                <li class="flex items-center ml-3 rounded-lg bg-teal-500 hover:cursor-pointer before:ease relative h-12 overflow-hidden shadow-2xl transition-all before:absolute before:top-1/2 before:h-0 before:w-64 before:origin-center before:-translate-x-20 before:rotate-45 before:duration-300 hover:text-white hover:shadow-teal-500 hover:before:h-64 hover:before:-translate-y-32">
-                    <a href="./documents/resume.pdf" download="Resume Gustavo Mafra" target="_blank" rel="noopener noreferrer" class="flex text-xl px-7 py-3 text-white z-10">
-                        Resume
-                    </a>
-                </li>
-            </ul>
+            </div>
         </nav>
     </header>
 
     <main class="flex flex-col w-full items-center justify-center">
-        <section class="flex items-center w-3/4 min-h-screen" id="about">
-            <div>
-                <h3 id="typewriter" class="text-teal-500 text-3xl py-3"></h3>
-                <h1 class="text-slate-100 font-bold text-6xl py-3">Gustavo Mafra</h1>
-                <h2 class="text-slate-400 text-4xl py-3">I'm a backend developer that build things for the web</h2>
-                <p class="text-slate-400 text-xl py-3 text-justify">I'm a Computer Engineer graduated from the University of Vale do Itajaí, with experience as a Backend Developer. Currently, I am enhancing my skills in data security and backend development, focusing on modern coding practices and clean architecture. Additionally, I am exploring new programming languages to expand my skills and strengthen my expertise in software development.</p>
-                <ul class="ml-1 mt-8 flex h-10 justify-start items-end" aria-label="Social media">
+        <section class="flex items-center w-3/4 min-h-screen xs:w-full xs:p-5" id="about">
+            <div class="h-full">
+                <h3 id="typewriter" class="text-teal-500 text-2xl py-3"></h3>
+                <h1 class="text-slate-100 font-bold text-6xl py-3 xs:text-5xl">Gustavo Mafra</h1>
+                <h2 class="text-slate-400 text-4xl py-3 xs:text-2xl text-justify">I'm a backend developer that build things for the web</h2>
+                <p class="text-slate-400 text-xl py-3 text-justify xs:text-base">I'm a Computer Engineer graduated from the University of Vale do Itajaí, with experience as a Backend Developer. Currently, I am enhancing my skills in data security and backend development, focusing on modern coding practices and clean architecture. Additionally, I am exploring new programming languages to expand my skills and strengthen my expertise in software development.</p>
+                <ul class="ml-1 mt-8 flex h-10 justify-start items-end xs:justify-center" aria-label="Social media">
                     <li>
                         <a href="https://github.com/GustavoSMafra" title="GitHub" target="_blank" rel="noopener noreferrer" class="flex items-center rounded-lg hover:bg-teal-400 hover:cursor-pointer relative h-12 overflow-hidden shadow-2xl transition-all hover:text-white hover:shadow-teal-500">
                             <i class="fa-brands fa-github fa-2xl flex text-xl px-7 py-3 text-white z-10"></i>
@@ -79,10 +101,10 @@
             </div>
         </section>
 
-        <section id="experience" class="flex flex-col w-3/4 min-h-screen">
+        <section id="experience" class="flex flex-col w-3/4 min-h-screen xs:w-full xs:p-5">
             <h3 class="text-teal-500 text-3xl py-3 mt-20">Experiences</h3>
             <div class="flex items-center justify-center w-full h-full">
-                <ol class="flex flex-col items-center w-4/6">
+                <ol class="flex flex-col items-center w-4/6 xs:w-full">
                     <li class="mb-12 w-5/6">
                         <div class="group relative grid pb-1 transition-all grid-cols-1 sm:grid-cols-8 gap-8 lg:hover:opacity-100 lg:group-hover:opacity-50 p-5">
                             <div class="absolute inset-0 hidden rounded-md transition lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
@@ -96,7 +118,7 @@
                                 </div>
                                 </h3>
                                 <p class="mt-2 text-sm leading-normal text-justify">
-                                    I developed and maintained modules for the Beto Carrero World website, one of the largest theme parks in Latin America, using PHP and the Yii2 framework. I managed deployments on AWS and version control. I also designed and developed a business simulation system for sales team training, tailored to client needs, using PHP and Yii2. Additionally, I provided technical support across multiple projects, solving specific issues as needed. I actively participated in Kanban methodology, contributing proactively in daily and weekly meetings to assist and guide colleagues.
+                                    I developed and maintained modules for the Beto Carrero World website, one of the largest theme parks in Latin America, using PHP and the Yii2 framework. I managed deployments on AWS and version control. I also designed and developed a business simulation system for sales team training, using PHP and Yii2. Additionally, I provided technical support across multiple projects, solving specific issues as needed. I actively participated in Kanban methodology, contributing proactively in daily and weekly meetings to assist and guide colleagues.
                                 </p>
                                 <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
                                     <li class="mr-1.5 mt-2">
@@ -186,7 +208,7 @@
             </div>
         </section>
 
-        <section id="projects" class="flex flex-col w-3/4 min-h-screen justify-center">
+        <section id="projects" class="flex flex-col w-3/4 min-h-screen justify-center xs:w-full xs:p-5">
             <h3 class="text-teal-500 text-3xl py-3 mt-20">Projects</h3>    
             <div class="relative overflow-hidden w-full h-96">
                 <div id="carousel" class="flex transition-transform duration-700 ease-in-out w-full h-full">
@@ -233,6 +255,19 @@
 </html>
 
 <script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.add('hidden');
+        });
+    });
+
     document.addEventListener('DOMContentLoaded', () => {
         const carousel = document.getElementById('carousel');
         const nextButton = document.getElementById('next');
