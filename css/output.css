@@ -1323,6 +1323,11 @@ video {
     color: rgb(94 234 212 / var(--tw-text-opacity));
   }
 
+  .sm\:hover\:text-teal-500:hover {
+    --tw-text-opacity: 1;
+    color: rgb(20 184 166 / var(--tw-text-opacity));
+  }
+
   .sm\:hover\:shadow-teal-500:hover {
     --tw-shadow-color: #14b8a6;
     --tw-shadow: var(--tw-shadow-colored);
