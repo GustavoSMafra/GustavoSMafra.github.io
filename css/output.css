@@ -1345,6 +1345,10 @@ video {
     margin-left: 1.25rem;
   }
 
+  .xs\:hidden {
+    display: none;
+  }
+
   .xs\:h-4\/5 {
     height: 80%;
   }
