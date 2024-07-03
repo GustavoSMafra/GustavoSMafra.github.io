@@ -876,11 +876,6 @@ video {
   padding: 1.25rem;
 }
 
-.px-24 {
-  padding-left: 6rem;
-  padding-right: 6rem;
-}
-
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -942,6 +937,10 @@ video {
 
 .pt-32 {
   padding-top: 8rem;
+}
+
+.pt-36 {
+  padding-top: 9rem;
 }
 
 .text-justify {
@@ -1392,10 +1391,6 @@ video {
 
   .xs\:flex-col {
     flex-direction: column;
-  }
-
-  .xs\:items-center {
-    align-items: center;
   }
 
   .xs\:justify-center {
